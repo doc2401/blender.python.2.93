@@ -1,0 +1,793 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Blender API Change Log &mdash; Blender Python API</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/api/current/change_log.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Python API"
+          href="_static/opensearch.xml"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Context Access (bpy.context)" href="bpy.context.html" />
+    <link rel="prev" title="Gotchas" href="info_gotcha.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Blender 2.93.18 Python API
+          
+
+          
+            
+            <img src="_static/blender_logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                cb886aba06d5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="info_quickstart.html">Quickstart: New to Blender or scripting and want to get your feet wet?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info_overview.html">API Overview: A more complete explanation of Python integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info_api_reference.html">API Reference Usage: examples of how to use the API reference docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info_best_practice.html">Best Practice: Conventions to follow for writing good scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info_tips_and_tricks.html">Tips and Tricks: Hints to help you while writing scripts for Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info_gotcha.html">Gotcha's: Some of the problems you may encounter when writing scripts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Change Log: List of changes since last Blender release</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bpy.context.html">Context Access (bpy.context)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bpy.data.html">Data Access (bpy.data)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bpy.msgbus.html">Message Bus (bpy.msgbus)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bpy.ops.html">Operators (bpy.ops)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bpy.types.html">Types (bpy.types)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bpy.utils.html">Utilities (bpy.utils)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bpy.path.html">Path Utilities (bpy.path)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bpy.app.html">Application Data (bpy.app)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bpy.props.html">Property Definitions (bpy.props)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standalone Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="aud.html">Audio System (aud)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bgl.html">OpenGL Wrapper (bgl)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bl_math.html">Additional Math Functions (bl_math)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blf.html">Font Drawing (blf)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bmesh.html">BMesh Module (bmesh)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bpy_extras.html">Extra Utilities (bpy_extras)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freestyle.html">Freestyle Module (freestyle)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Shader Module (gpu)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu_extras.html">GPU Utilities (gpu_extras)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="idprop.types.html">ID Property Access (idprop.types)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imbuf.html">Image Buffer (imbuf)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathutils.html">Math Types &amp; Utilities (mathutils)</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blender 2.93.18 Python API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Blender API Change Log</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="blender-api-change-log">
+<h1>Blender API Change Log<a class="headerlink" href="#blender-api-change-log" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="to-2-93">
+<h2>2.92 to 2.93<a class="headerlink" href="#to-2-93" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bpy-types-action">
+<h3>bpy.types.Action<a class="headerlink" href="#bpy-types-action" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="added">
+<h4>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Action.html#bpy.types.Action.flip_with_pose" title="bpy.types.Action.flip_with_pose"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Action.flip_with_pose</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-arealight">
+<h3>bpy.types.AreaLight<a class="headerlink" href="#bpy-types-arealight" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>Added<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.AreaLight.html#bpy.types.AreaLight.spread" title="bpy.types.AreaLight.spread"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.AreaLight.spread</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-armature">
+<h3>bpy.types.Armature<a class="headerlink" href="#bpy-types-armature" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h4>Added<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Armature.html#bpy.types.Armature.axes_position" title="bpy.types.Armature.axes_position"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Armature.axes_position</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-booleanmodifier">
+<h3>bpy.types.BooleanModifier<a class="headerlink" href="#bpy-types-booleanmodifier" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h4>Added<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.BooleanModifier.html#bpy.types.BooleanModifier.use_hole_tolerant" title="bpy.types.BooleanModifier.use_hole_tolerant"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.BooleanModifier.use_hole_tolerant</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-brushgpencilsettings">
+<h3>bpy.types.BrushGpencilSettings<a class="headerlink" href="#bpy-types-brushgpencilsettings" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h4>Added<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.BrushGpencilSettings.html#bpy.types.BrushGpencilSettings.extend_stroke_factor" title="bpy.types.BrushGpencilSettings.extend_stroke_factor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.BrushGpencilSettings.extend_stroke_factor</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.BrushGpencilSettings.html#bpy.types.BrushGpencilSettings.show_fill_extend" title="bpy.types.BrushGpencilSettings.show_fill_extend"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.BrushGpencilSettings.show_fill_extend</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.BrushGpencilSettings.html#bpy.types.BrushGpencilSettings.use_fill_limit" title="bpy.types.BrushGpencilSettings.use_fill_limit"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.BrushGpencilSettings.use_fill_limit</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="removed">
+<h4>Removed<a class="headerlink" href="#removed" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>use_edit_pressure</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-collection">
+<h3>bpy.types.Collection<a class="headerlink" href="#bpy-types-collection" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>Added<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Collection.html#bpy.types.Collection.lineart_usage" title="bpy.types.Collection.lineart_usage"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Collection.lineart_usage</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-curve">
+<h3>bpy.types.Curve<a class="headerlink" href="#bpy-types-curve" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h4>Added<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Curve.html#bpy.types.Curve.taper_radius_mode" title="bpy.types.Curve.taper_radius_mode"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Curve.taper_radius_mode</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.Curve.html#bpy.types.Curve.use_path_clamp" title="bpy.types.Curve.use_path_clamp"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Curve.use_path_clamp</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-curvemapping">
+<h3>bpy.types.CurveMapping<a class="headerlink" href="#bpy-types-curvemapping" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h4>Added<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.CurveMapping.html#bpy.types.CurveMapping.reset_view" title="bpy.types.CurveMapping.reset_view"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.CurveMapping.reset_view</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-curveprofile">
+<h3>bpy.types.CurveProfile<a class="headerlink" href="#bpy-types-curveprofile" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h4>Added<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.CurveProfile.html#bpy.types.CurveProfile.reset_view" title="bpy.types.CurveProfile.reset_view"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.CurveProfile.reset_view</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-cyclesrendersettings">
+<h3>bpy.types.CyclesRenderSettings<a class="headerlink" href="#bpy-types-cyclesrendersettings" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h4>Added<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.CyclesRenderSettings.preview_denoising_input_passes</span></code></p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.CyclesRenderSettings.use_fast_gi</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-gpencilinterpolatesettings">
+<h3>bpy.types.GPencilInterpolateSettings<a class="headerlink" href="#bpy-types-gpencilinterpolatesettings" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h4>Removed<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>amplitude</strong></p></li>
+<li><p><strong>back</strong></p></li>
+<li><p><strong>easing</strong></p></li>
+<li><p><strong>interpolate_all_layers</strong></p></li>
+<li><p><strong>interpolate_selected_only</strong></p></li>
+<li><p><strong>period</strong></p></li>
+<li><p><strong>step</strong></p></li>
+<li><p><strong>type</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-gpencillayer">
+<h3>bpy.types.GPencilLayer<a class="headerlink" href="#bpy-types-gpencillayer" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id11">
+<h4>Added<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.GPencilLayer.html#bpy.types.GPencilLayer.location" title="bpy.types.GPencilLayer.location"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GPencilLayer.location</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.GPencilLayer.html#bpy.types.GPencilLayer.matrix_inverse_layer" title="bpy.types.GPencilLayer.matrix_inverse_layer"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GPencilLayer.matrix_inverse_layer</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.GPencilLayer.html#bpy.types.GPencilLayer.matrix_layer" title="bpy.types.GPencilLayer.matrix_layer"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GPencilLayer.matrix_layer</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.GPencilLayer.html#bpy.types.GPencilLayer.rotation" title="bpy.types.GPencilLayer.rotation"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GPencilLayer.rotation</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.GPencilLayer.html#bpy.types.GPencilLayer.scale" title="bpy.types.GPencilLayer.scale"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GPencilLayer.scale</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-gpencilstroke">
+<h3>bpy.types.GPencilStroke<a class="headerlink" href="#bpy-types-gpencilstroke" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id12">
+<h4>Added<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.GPencilStroke.html#bpy.types.GPencilStroke.select_index" title="bpy.types.GPencilStroke.select_index"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GPencilStroke.select_index</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h4>Removed<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>groups</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-gpencilstrokepoints">
+<h3>bpy.types.GPencilStrokePoints<a class="headerlink" href="#bpy-types-gpencilstrokepoints" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h4>Added<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.GPencilStrokePoints.html#bpy.types.GPencilStrokePoints.update" title="bpy.types.GPencilStrokePoints.update"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GPencilStrokePoints.update</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.GPencilStrokePoints.html#bpy.types.GPencilStrokePoints.weight_get" title="bpy.types.GPencilStrokePoints.weight_get"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GPencilStrokePoints.weight_get</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.GPencilStrokePoints.html#bpy.types.GPencilStrokePoints.weight_set" title="bpy.types.GPencilStrokePoints.weight_set"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GPencilStrokePoints.weight_set</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-geometrynodealignrotationtovector">
+<h3>bpy.types.GeometryNodeAlignRotationToVector<a class="headerlink" href="#bpy-types-geometrynodealignrotationtovector" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id15">
+<h4>Added<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.GeometryNodeAlignRotationToVector.html#bpy.types.GeometryNodeAlignRotationToVector.pivot_axis" title="bpy.types.GeometryNodeAlignRotationToVector.pivot_axis"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GeometryNodeAlignRotationToVector.pivot_axis</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-geometrynodeattributemath">
+<h3>bpy.types.GeometryNodeAttributeMath<a class="headerlink" href="#bpy-types-geometrynodeattributemath" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h4>Added<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.GeometryNodeAttributeMath.html#bpy.types.GeometryNodeAttributeMath.input_type_c" title="bpy.types.GeometryNodeAttributeMath.input_type_c"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GeometryNodeAttributeMath.input_type_c</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-geometrynodeattributerandomize">
+<h3>bpy.types.GeometryNodeAttributeRandomize<a class="headerlink" href="#bpy-types-geometrynodeattributerandomize" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="renamed">
+<h4>Renamed<a class="headerlink" href="#renamed" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>domain</strong> -&gt; <a class="reference internal" href="bpy.types.GeometryNodeAttributeRandomize.html#bpy.types.GeometryNodeAttributeRandomize.operation" title="bpy.types.GeometryNodeAttributeRandomize.operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.GeometryNodeAttributeRandomize.operation</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-hair-ul-attributes">
+<h3>bpy.types.HAIR_UL_attributes<a class="headerlink" href="#bpy-types-hair-ul-attributes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="function-arguments">
+<h4>Function Arguments<a class="headerlink" href="#function-arguments" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.HAIR_UL_attributes.html#bpy.types.HAIR_UL_attributes.draw_item" title="bpy.types.HAIR_UL_attributes.draw_item"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.HAIR_UL_attributes.draw_item</span></code></a> (self, _context, layout, _data, attribute, _icon, _active_data, _active_propname, _index), <em>was (self, context, layout, data, attribute, icon, active_data, active_propname, index)</em></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-id">
+<h3>bpy.types.ID<a class="headerlink" href="#bpy-types-id" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id17">
+<h4>Added<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.override_template_create" title="bpy.types.ID.override_template_create"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.ID.override_template_create</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-light">
+<h3>bpy.types.Light<a class="headerlink" href="#bpy-types-light" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id18">
+<h4>Added<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Light.html#bpy.types.Light.diffuse_factor" title="bpy.types.Light.diffuse_factor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Light.diffuse_factor</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.Light.html#bpy.types.Light.volume_factor" title="bpy.types.Light.volume_factor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Light.volume_factor</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-material">
+<h3>bpy.types.Material<a class="headerlink" href="#bpy-types-material" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id19">
+<h4>Added<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Material.html#bpy.types.Material.lineart" title="bpy.types.Material.lineart"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Material.lineart</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-mesh">
+<h3>bpy.types.Mesh<a class="headerlink" href="#bpy-types-mesh" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id20">
+<h4>Added<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Mesh.html#bpy.types.Mesh.use_mirror_vertex_groups" title="bpy.types.Mesh.use_mirror_vertex_groups"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Mesh.use_mirror_vertex_groups</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="id21">
+<h4>Removed<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>use_mirror_vertex_group_x</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-mirrormodifier">
+<h3>bpy.types.MirrorModifier<a class="headerlink" href="#bpy-types-mirrormodifier" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id22">
+<h4>Added<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.MirrorModifier.html#bpy.types.MirrorModifier.bisect_threshold" title="bpy.types.MirrorModifier.bisect_threshold"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.MirrorModifier.bisect_threshold</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-moviesequence">
+<h3>bpy.types.MovieSequence<a class="headerlink" href="#bpy-types-moviesequence" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id23">
+<h4>Removed<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>mpeg_preseek</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-movietrackingsettings">
+<h3>bpy.types.MovieTrackingSettings<a class="headerlink" href="#bpy-types-movietrackingsettings" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id24">
+<h4>Removed<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>show_default_expanded</strong></p></li>
+<li><p><strong>show_extra_expanded</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-node">
+<h3>bpy.types.Node<a class="headerlink" href="#bpy-types-node" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id25">
+<h4>Added<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Node.html#bpy.types.Node.active_preview" title="bpy.types.Node.active_preview"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Node.active_preview</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-nodelink">
+<h3>bpy.types.NodeLink<a class="headerlink" href="#bpy-types-nodelink" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id26">
+<h4>Added<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.NodeLink.html#bpy.types.NodeLink.is_muted" title="bpy.types.NodeLink.is_muted"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.NodeLink.is_muted</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-nodesocket">
+<h3>bpy.types.NodeSocket<a class="headerlink" href="#bpy-types-nodesocket" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id27">
+<h4>Added<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.description" title="bpy.types.NodeSocket.description"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.NodeSocket.description</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.is_multi_input" title="bpy.types.NodeSocket.is_multi_input"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.NodeSocket.is_multi_input</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-nodesocketinterface">
+<h3>bpy.types.NodeSocketInterface<a class="headerlink" href="#bpy-types-nodesocketinterface" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id28">
+<h4>Added<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.NodeSocketInterface.html#bpy.types.NodeSocketInterface.description" title="bpy.types.NodeSocketInterface.description"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.NodeSocketInterface.description</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-noisegpencilmodifier">
+<h3>bpy.types.NoiseGpencilModifier<a class="headerlink" href="#bpy-types-noisegpencilmodifier" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id29">
+<h4>Added<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.NoiseGpencilModifier.html#bpy.types.NoiseGpencilModifier.noise_offset" title="bpy.types.NoiseGpencilModifier.noise_offset"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.NoiseGpencilModifier.noise_offset</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-object">
+<h3>bpy.types.Object<a class="headerlink" href="#bpy-types-object" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id30">
+<h4>Added<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Object.html#bpy.types.Object.lineart" title="bpy.types.Object.lineart"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Object.lineart</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.Object.html#bpy.types.Object.to_curve" title="bpy.types.Object.to_curve"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Object.to_curve</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.Object.html#bpy.types.Object.to_curve_clear" title="bpy.types.Object.to_curve_clear"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Object.to_curve_clear</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.Object.html#bpy.types.Object.use_mesh_mirror_x" title="bpy.types.Object.use_mesh_mirror_x"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Object.use_mesh_mirror_x</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.Object.html#bpy.types.Object.use_mesh_mirror_y" title="bpy.types.Object.use_mesh_mirror_y"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Object.use_mesh_mirror_y</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.Object.html#bpy.types.Object.use_mesh_mirror_z" title="bpy.types.Object.use_mesh_mirror_z"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Object.use_mesh_mirror_z</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-operator">
+<h3>bpy.types.Operator<a class="headerlink" href="#bpy-types-operator" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id31">
+<h4>Added<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Operator.html#bpy.types.Operator.bl_property" title="bpy.types.Operator.bl_property"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Operator.bl_property</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-pointcloud-ul-attributes">
+<h3>bpy.types.POINTCLOUD_UL_attributes<a class="headerlink" href="#bpy-types-pointcloud-ul-attributes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id32">
+<h4>Function Arguments<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.POINTCLOUD_UL_attributes.html#bpy.types.POINTCLOUD_UL_attributes.draw_item" title="bpy.types.POINTCLOUD_UL_attributes.draw_item"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.POINTCLOUD_UL_attributes.draw_item</span></code></a> (self, _context, layout, _data, attribute, _icon, _active_data, _active_propname, _index), <em>was (self, context, layout, data, attribute, icon, active_data, active_propname, index)</em></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-panel">
+<h3>bpy.types.Panel<a class="headerlink" href="#bpy-types-panel" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id33">
+<h4>Added<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Panel.html#bpy.types.Panel.bl_description" title="bpy.types.Panel.bl_description"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Panel.bl_description</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-pose">
+<h3>bpy.types.Pose<a class="headerlink" href="#bpy-types-pose" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id34">
+<h4>Added<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Pose.html#bpy.types.Pose.apply_pose_from_action" title="bpy.types.Pose.apply_pose_from_action"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Pose.apply_pose_from_action</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-preferencesexperimental">
+<h3>bpy.types.PreferencesExperimental<a class="headerlink" href="#bpy-types-preferencesexperimental" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id35">
+<h4>Renamed<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>use_switch_object_operator</strong> -&gt; <a class="reference internal" href="bpy.types.PreferencesExperimental.html#bpy.types.PreferencesExperimental.override_auto_resync" title="bpy.types.PreferencesExperimental.override_auto_resync"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.PreferencesExperimental.override_auto_resync</span></code></a></p></li>
+<li><p><strong>use_switch_object_operator</strong> -&gt; <a class="reference internal" href="bpy.types.PreferencesExperimental.html#bpy.types.PreferencesExperimental.use_override_templates" title="bpy.types.PreferencesExperimental.use_override_templates"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.PreferencesExperimental.use_override_templates</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-preferencessystem">
+<h3>bpy.types.PreferencesSystem<a class="headerlink" href="#bpy-types-preferencessystem" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id36">
+<h4>Added<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.PreferencesSystem.html#bpy.types.PreferencesSystem.sequencer_proxy_setup" title="bpy.types.PreferencesSystem.sequencer_proxy_setup"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.PreferencesSystem.sequencer_proxy_setup</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-preferencesview">
+<h3>bpy.types.PreferencesView<a class="headerlink" href="#bpy-types-preferencesview" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id37">
+<h4>Added<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.PreferencesView.html#bpy.types.PreferencesView.gizmo_size_navigate_v3d" title="bpy.types.PreferencesView.gizmo_size_navigate_v3d"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.PreferencesView.gizmo_size_navigate_v3d</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-region">
+<h3>bpy.types.Region<a class="headerlink" href="#bpy-types-region" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id38">
+<h4>Added<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Region.html#bpy.types.Region.data" title="bpy.types.Region.data"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Region.data</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-renderengine">
+<h3>bpy.types.RenderEngine<a class="headerlink" href="#bpy-types-renderengine" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id39">
+<h4>Added<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.RenderEngine.html#bpy.types.RenderEngine.bl_use_custom_freestyle" title="bpy.types.RenderEngine.bl_use_custom_freestyle"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.RenderEngine.bl_use_custom_freestyle</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-scene">
+<h3>bpy.types.Scene<a class="headerlink" href="#bpy-types-scene" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id40">
+<h4>Function Arguments<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Scene.html#bpy.types.Scene.alembic_export" title="bpy.types.Scene.alembic_export"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Scene.alembic_export</span></code></a> (filepath, frame_start, frame_end, xform_samples, geom_samples, shutter_open, shutter_close, selected_only, uvs, normals, vcolors, apply_subdiv, flatten, visible_objects_only, face_sets, subdiv_schema, export_hair, export_particles, packuv, scale, triangulate, quad_method, ngon_method), <em>was (filepath, frame_start, frame_end, xform_samples, geom_samples, shutter_open, shutter_close, selected_only, uvs, normals, vcolors, apply_subdiv, flatten, visible_objects_only, renderable_only, face_sets, subdiv_schema, export_hair, export_particles, packuv, scale, triangulate, quad_method, ngon_method)</em></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-sceneeevee">
+<h3>bpy.types.SceneEEVEE<a class="headerlink" href="#bpy-types-sceneeevee" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id41">
+<h4>Added<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.SceneEEVEE.html#bpy.types.SceneEEVEE.bokeh_denoise_fac" title="bpy.types.SceneEEVEE.bokeh_denoise_fac"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SceneEEVEE.bokeh_denoise_fac</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.SceneEEVEE.html#bpy.types.SceneEEVEE.bokeh_neighbor_max" title="bpy.types.SceneEEVEE.bokeh_neighbor_max"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SceneEEVEE.bokeh_neighbor_max</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.SceneEEVEE.html#bpy.types.SceneEEVEE.bokeh_overblur" title="bpy.types.SceneEEVEE.bokeh_overblur"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SceneEEVEE.bokeh_overblur</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.SceneEEVEE.html#bpy.types.SceneEEVEE.use_bokeh_high_quality_slight_defocus" title="bpy.types.SceneEEVEE.use_bokeh_high_quality_slight_defocus"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SceneEEVEE.use_bokeh_high_quality_slight_defocus</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.SceneEEVEE.html#bpy.types.SceneEEVEE.use_bokeh_jittered" title="bpy.types.SceneEEVEE.use_bokeh_jittered"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SceneEEVEE.use_bokeh_jittered</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-sequence">
+<h3>bpy.types.Sequence<a class="headerlink" href="#bpy-types-sequence" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id42">
+<h4>Added<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Sequence.html#bpy.types.Sequence.move_to_meta" title="bpy.types.Sequence.move_to_meta"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Sequence.move_to_meta</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-sequencesmeta">
+<h3>bpy.types.SequencesMeta<a class="headerlink" href="#bpy-types-sequencesmeta" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id43">
+<h4>Added<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.SequencesMeta.html#bpy.types.SequencesMeta.new_meta" title="bpy.types.SequencesMeta.new_meta"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SequencesMeta.new_meta</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="id44">
+<h4>Function Arguments<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.SequencesMeta.html#bpy.types.SequencesMeta.new_image" title="bpy.types.SequencesMeta.new_image"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SequencesMeta.new_image</span></code></a> (name, filepath, channel, frame_start, fit_method), <em>was (name, filepath, channel, frame_start)</em></p></li>
+<li><p><a class="reference internal" href="bpy.types.SequencesMeta.html#bpy.types.SequencesMeta.new_movie" title="bpy.types.SequencesMeta.new_movie"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SequencesMeta.new_movie</span></code></a> (name, filepath, channel, frame_start, fit_method), <em>was (name, filepath, channel, frame_start)</em></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-sequencestoplevel">
+<h3>bpy.types.SequencesTopLevel<a class="headerlink" href="#bpy-types-sequencestoplevel" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id45">
+<h4>Added<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.SequencesTopLevel.html#bpy.types.SequencesTopLevel.new_meta" title="bpy.types.SequencesTopLevel.new_meta"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SequencesTopLevel.new_meta</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="id46">
+<h4>Function Arguments<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.SequencesTopLevel.html#bpy.types.SequencesTopLevel.new_image" title="bpy.types.SequencesTopLevel.new_image"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SequencesTopLevel.new_image</span></code></a> (name, filepath, channel, frame_start, fit_method), <em>was (name, filepath, channel, frame_start)</em></p></li>
+<li><p><a class="reference internal" href="bpy.types.SequencesTopLevel.html#bpy.types.SequencesTopLevel.new_movie" title="bpy.types.SequencesTopLevel.new_movie"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SequencesTopLevel.new_movie</span></code></a> (name, filepath, channel, frame_start, fit_method), <em>was (name, filepath, channel, frame_start)</em></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-spacefilebrowser">
+<h3>bpy.types.SpaceFileBrowser<a class="headerlink" href="#bpy-types-spacefilebrowser" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id47">
+<h4>Added<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.SpaceFileBrowser.html#bpy.types.SpaceFileBrowser.activate_asset_by_id" title="bpy.types.SpaceFileBrowser.activate_asset_by_id"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SpaceFileBrowser.activate_asset_by_id</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-spacegrapheditor">
+<h3>bpy.types.SpaceGraphEditor<a class="headerlink" href="#bpy-types-spacegrapheditor" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id48">
+<h4>Added<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.SpaceGraphEditor.html#bpy.types.SpaceGraphEditor.show_extrapolation" title="bpy.types.SpaceGraphEditor.show_extrapolation"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SpaceGraphEditor.show_extrapolation</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-spaceoutliner">
+<h3>bpy.types.SpaceOutliner<a class="headerlink" href="#bpy-types-spaceoutliner" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id49">
+<h4>Added<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.SpaceOutliner.html#bpy.types.SpaceOutliner.use_filter_lib_override_system" title="bpy.types.SpaceOutliner.use_filter_lib_override_system"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SpaceOutliner.use_filter_lib_override_system</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-spacesequenceeditor">
+<h3>bpy.types.SpaceSequenceEditor<a class="headerlink" href="#bpy-types-spacesequenceeditor" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id50">
+<h4>Added<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.SpaceSequenceEditor.html#bpy.types.SpaceSequenceEditor.show_transform_preview" title="bpy.types.SpaceSequenceEditor.show_transform_preview"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SpaceSequenceEditor.show_transform_preview</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.SpaceSequenceEditor.html#bpy.types.SpaceSequenceEditor.use_proxies" title="bpy.types.SpaceSequenceEditor.use_proxies"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.SpaceSequenceEditor.use_proxies</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-textsequence">
+<h3>bpy.types.TextSequence<a class="headerlink" href="#bpy-types-textsequence" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id51">
+<h4>Added<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.TextSequence.html#bpy.types.TextSequence.use_bold" title="bpy.types.TextSequence.use_bold"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.TextSequence.use_bold</span></code></a></p></li>
+<li><p><a class="reference internal" href="bpy.types.TextSequence.html#bpy.types.TextSequence.use_italic" title="bpy.types.TextSequence.use_italic"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.TextSequence.use_italic</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-theme">
+<h3>bpy.types.Theme<a class="headerlink" href="#bpy-types-theme" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id52">
+<h4>Added<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.Theme.html#bpy.types.Theme.spreadsheet" title="bpy.types.Theme.spreadsheet"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.Theme.spreadsheet</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-viewlayer-ul-aov">
+<h3>bpy.types.VIEWLAYER_UL_aov<a class="headerlink" href="#bpy-types-viewlayer-ul-aov" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id53">
+<h4>Function Arguments<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.VIEWLAYER_UL_aov.html#bpy.types.VIEWLAYER_UL_aov.draw_item" title="bpy.types.VIEWLAYER_UL_aov.draw_item"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.VIEWLAYER_UL_aov.draw_item</span></code></a> (self, _context, layout, _data, item, icon, _active_data, _active_propname), <em>was (self, context, layout, data, item, icon, active_data, active_propname)</em></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bpy-types-volume-ul-grids">
+<h3>bpy.types.VOLUME_UL_grids<a class="headerlink" href="#bpy-types-volume-ul-grids" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id54">
+<h4>Function Arguments<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="bpy.types.VOLUME_UL_grids.html#bpy.types.VOLUME_UL_grids.draw_item" title="bpy.types.VOLUME_UL_grids.draw_item"><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.VOLUME_UL_grids.draw_item</span></code></a> (self, _context, layout, _data, grid, _icon, _active_data, _active_propname, _index), <em>was (self, context, layout, data, grid, icon, active_data, active_propname, index)</em></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="bpy.context.html" class="btn btn-neutral float-right" title="Context Access (bpy.context)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="info_gotcha.html" class="btn btn-neutral float-left" title="Gotchas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Blender Foundation.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
